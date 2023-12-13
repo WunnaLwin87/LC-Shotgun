@@ -62,7 +62,7 @@ namespace Gun
 
         Transform BulletSpawnPoint;
 
-        public float spread = 7f, range = 35;
+        public float spread = 7f, range = 105;
 
         RoundManager roundManager;
 
@@ -85,10 +85,10 @@ namespace Gun
         {
             base.ItemActivate(used, buttonDown); 
 
-            if (insertedBattery.charge >= 0.16f)
+            if (insertedBattery.charge >= 0.08f)
             {
-                insertedBattery.charge -= 0.16f;
-                if (insertedBattery.charge < 0.16f) insertedBattery.charge = 0;
+                insertedBattery.charge -= 0.08f;
+                if (insertedBattery.charge < 0.08f) insertedBattery.charge = 0;
 
                 audioSource.PlayOneShot(shootSound);
                 particleSystem.Play();
